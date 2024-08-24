@@ -1,0 +1,49 @@
+# HOC
+
+The smallest but coolest building blocks to fullfill all my credits for my Bachelors degree were the HOC courses. 
+One of them was about Quarto
+
+Quarto is an open-source scientific and technical publishing system that makes it easy to create high-quality documents, reports, presentations, and more. It's designed to be user-friendly, powerful, and flexible, allowing users to incorporate code, text, and multimedia content seamlessly.
+
+## Key Features
+
+Here are some of the key features of Quarto:
+
+- **Multi-format output**: You can render your documents into multiple formats, including HTML, PDF, and EPUB.
+- **Integrated Code**: Quarto supports embedding code chunks in languages like Python, R, and Julia.
+- **Markdown-based**: Quarto uses Markdown, making it easy to write and format text.
+- **Cross-references**: Easily create cross-references for sections, figures, and tables.
+
+## Example of a Code Chunk
+
+Quarto allows you to include code chunks directly in your document. Here's an example using Python:
+
+```{python}
+#| label: fig-polar
+#| fig-cap: "A line plot on a polar axis"
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+r = np.arange(0, 2, 0.01)
+theta = 2 * np.pi * r
+fig, ax = plt.subplots(
+  subplot_kw = {'projection': 'polar'} 
+)
+ax.plot(theta, r)
+ax.set_rticks([0.5, 1, 1.5, 2])
+ax.grid(True)
+plt.show()
+```
+
+## Tables 
+
+The example table in the code displays a simple table with three columns. Each column contains the word "Data" repeated three times. The table is created using Markdown syntax, with each column separated by vertical bars (|). The table headers are specified in the first row, and the data is filled in subsequent rows.
+
+
+
+| Semester 1 | Semester 2 | Semester 3 |
+|----------|----------|----------|
+|   Fun    |   Table  |    !     |
+|   Let's  |   Have   |   Some   |
+|   Fun    |   with   |   Code   |

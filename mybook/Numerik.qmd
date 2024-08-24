@@ -1,0 +1,81 @@
+# Numerik
+
+Numerical mathematics, also known as numerical analysis, is a branch of mathematics that focuses on developing algorithms and methods for solving mathematical problems using numerical approximations. In this section, we will explore some key concepts and techniques in numerical mathematics.
+
+## Root Finding
+
+One important problem in numerical mathematics is finding the roots of a function. The root of a function is a value that makes the function equal to zero. There are several methods for root finding, such as the bisection method, Newton's method, and the secant method.
+
+### Bisection Method
+
+The bisection method is a simple and robust method for finding roots. It works by repeatedly dividing an interval in half and narrowing down the interval until a root is found. Here's an example implementation in Python:
+
+## Upper Lower Matrix Method
+
+The Upper Lower Matrix Method is a technique used to solve systems of linear equations. It involves decomposing a matrix into an upper triangular matrix and a lower triangular matrix. This decomposition allows for efficient and straightforward solutions to linear systems.
+
+To illustrate the Upper Lower Matrix Method, let's consider a system of linear equations:
+## Die LR-Zerlegung
+
+Die LR-Zerlegung (auch LU-Zerlegung) ist eine Methode zur Zerlegung einer quadratischen Matrix in zwei Matrizen: eine untere Dreiecksmatrix **L** und eine obere Dreiecksmatrix **R** (oder **U**). Diese Methode wird häufig in der numerischen Mathematik zur Lösung von Gleichungssystemen, zur Inversion von Matrizen und zur Bestimmung der Determinante verwendet.
+
+## Definition
+
+Gegeben eine Matrix **A**, kann die LR-Zerlegung wie folgt geschrieben werden:
+
+$$
+A = L \cdot R
+$$
+
+Dabei ist:
+
+- **L** eine untere Dreiecksmatrix mit Einsen auf der Diagonalen.
+- **R** eine obere Dreiecksmatrix.
+
+### Beispiel
+
+Betrachten wir eine Matrix **A**:
+
+$$
+A = \begin{pmatrix}
+2 & 3 & 1 \\
+4 & 7 & 2 \\
+6 & 18 & 5
+\end{pmatrix}
+$$
+
+Die LR-Zerlegung von **A** ergibt:
+
+$$
+L = \begin{pmatrix}
+1 & 0 & 0 \\
+2 & 1 & 0 \\
+3 & 3 & 1
+\end{pmatrix},
+\quad
+R = \begin{pmatrix}
+2 & 3 & 1 \\
+0 & 1 & 0 \\
+0 & 0 & 1
+\end{pmatrix}
+$$
+
+## Berechnung der LR-Zerlegung
+
+Die LR-Zerlegung kann mit verschiedenen numerischen Verfahren berechnet werden. Eine der am häufigsten verwendeten Methoden ist der Gaußsche Eliminationsprozess.
+
+```{python}
+import numpy as np
+from scipy.linalg import lu
+
+# Definieren der Matrix A
+A = np.array([[2, 3, 1],
+              [4, 7, 2],
+              [6, 18, 5]])
+
+# Durchführung der LR-Zerlegung
+P, L, U = lu(A)
+
+print("L =\n", L)
+print("R =\n", U)
+```

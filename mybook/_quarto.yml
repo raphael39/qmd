@@ -1,0 +1,28 @@
+project:
+  type: book
+
+book:
+  title: "This is my last summer semester 2024 at KIT"
+  author: "Raphael Sebastian Sutter"
+  date: "09.08.2024"
+  chapters:
+    - index.qmd
+    - hoc.qmd
+    - SE.qmd
+    - Numerik.qmd
+    - Rechnerstrukturen.qmd
+    - next.qmd
+
+format:
+  html:
+    toc: true
+    code-fold: true
+  pdf:
+    toc: true
+    mermaid: true
+    documentclass: scrreprt
+
+execute:
+  echo: true      # Show the code
+  eval: true      # Evaluate the code
+  output: true    # Show the output

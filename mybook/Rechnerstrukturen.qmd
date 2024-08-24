@@ -1,0 +1,61 @@
+# Rechnerstrukturen
+
+Die Rechnerstrukturen und die Produktion von Hardware Chips sind zwei wichtige Aspekte der Computertechnologie. In diesem Artikel werden wir einen Überblick über diese Themen geben.
+
+
+## Definition
+
+Rechnerstrukturen beziehen sich auf die Architektur und Organisation von Computern. Sie umfassen die verschiedenen Komponenten eines Computersystems, wie Prozessor, Speicher, Eingabe- und Ausgabegeräte sowie die Verbindungen zwischen ihnen.
+
+### Von-Neumann-Architektur
+
+Die Von-Neumann-Architektur ist eine der grundlegendsten Arten von Rechnerstrukturen. Sie besteht aus vier Hauptkomponenten:
+
+1. **Speicher:** Speichert Daten und Programme.
+2. **Rechenwerk (ALU):** Führt arithmetische und logische Operationen durch.
+3. **Steuerwerk:** Interpretiert Befehle und steuert die anderen Komponenten.
+4. **Eingabe-/Ausgabeschnittstellen:** Ermöglichen die Interaktion mit dem Computer.
+
+
+::: {.callout-note}
+Die Von-Neumann-Architektur ist besonders bekannt für ihre Einfachheit und die Tatsache, dass sowohl Programme als auch Daten im selben Speicher gespeichert werden.
+:::
+
+### Harvard-Architektur
+
+Die Harvard-Architektur unterscheidet sich dadurch, dass sie separate Speicher für Programme und Daten verwendet, was parallele Datenverarbeitung erleichtert und die Effizienz erhöht.
+
+### Diagramm: Datenfluss in einer einfachen Computerarchitektur
+
+1. Program Memory (Programmspeicher) sendet Daten an die CPU.
+2. Data Memory (Datenspeicher) sendet ebenfalls Daten an die CPU.
+3. Die CPU verarbeitet die Daten und sendet die Ergebnisse an die Ausgabe.
+
+### Textdiagramm:
+
+Program Memory --> CPU
+Data Memory -----> CPU
+                   |
+                   v
+                 Output
+
+
+
+
+## Interaktive Visualisierung mit Plotly
+
+```{python}
+import plotly.express as px
+import pandas as pd
+
+df = pd.DataFrame({
+    "x": [1, 2, 3, 4, 5],
+    "y": [10, 15, 13, 17, 14],
+    "z": ["A", "B", "C", "D", "E"]
+})
+
+fig = px.scatter(df, x="x", y="y", text="z", title="Interaktive Plotly Grafik")
+fig.update_traces(marker=dict(size=12, color="LightSkyBlue"), selector=dict(mode='markers'))
+
+fig.show()
+
